@@ -16,7 +16,7 @@ const AddTask = ({ addTodo, Todos }) => {
     <div className={styles.todoForm}>
       <input data-cy="add-task-input" type="text" onChange={handlechange} />
       <button value={todo} data-cy="add-task-button" onClick={()=>{ 
-        if(todo!=="" && (Todos.filter(el=> el.value!=todo))){
+        if(todo!=="" && (Todos.filter(el=> el.value!==todo))){
 
           addTodo(todo);
           setTodo("")
